@@ -3,10 +3,10 @@ import ItemsListContainer from "./componentes/ItemsListContainer/ItemsListContai
 import "./App.css";
 import "./css/bootstrap.min.css";
 /* import "bootstrap-icons/font/bootstrap-icons.css"; */
-import Header from "./Header";
+/* import Header from "./Header"; */
 
 function App() {
-  return <Header />;
+  return <NavBar />;
 }
 
 export default App;
