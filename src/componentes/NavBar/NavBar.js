@@ -3,28 +3,14 @@ import CartWidgets from "../CartWidgets/CartWidgets";
 import "./NavBar.css";
 
 const NavBar = () => {
-  /*  return (
-    <div className="menu-navbar-conteiner">
-      <h1 className="menu-title">Bicicletas Devenir</h1>
-      <ul className="menu-items">
-        <li>
-          <a href="" className="menu-list">
-            Bicicletas
-          </a>
-        </li>
-        <li>
-          <a href="" className="menu-list">
-            Buscador
-          </a>
-        </li>
-      </ul>
-      <CartWidgets />
-    </div>
-  ); */
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        Bicicletas Devenir
+        <a className="navbar-brand" href="#">
+          {" "}
+          Bicicletas Devenir
+        </a>
+
         <button
           className="navbar-toggler"
           type="button"
