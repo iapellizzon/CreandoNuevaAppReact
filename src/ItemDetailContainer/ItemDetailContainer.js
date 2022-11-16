@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { data } from "../data/data";
 import ItemsListContainer from "../componentes/ItemsListContainer/ItemsListContainer";
 import { useParams } from "react-router-dom";
+import ItemDetail from "../componentes/ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const [productSelected, setProductSelected] = useState();

@@ -25,7 +25,7 @@ const ItemsListContainer = () => {
       .then((res) => setItems(res))
       .catch((error) => console.log(error));
   }, [categoryName]);
-  return <div>{/*       <Itemlist products={items} /> */}</div>;
+  return <div>{<Itemlist products={items} />}</div>;
 };
 
 /* const ItemsListContainer = (props) => {
