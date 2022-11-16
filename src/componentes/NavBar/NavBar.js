@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import CartWidgets from "../CartWidgets/CartWidgets";
 import "./NavBar.css";
 
@@ -6,10 +7,17 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          {" "}
-          Bicicletas Devenir
-        </a>
+        <li>
+          <a className="navbar-brand" href="#">
+            {" "}
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to="/"
+            >
+              Bicicletas Devenir
+            </NavLink>
+          </a>
+        </li>
 
         <button
           className="navbar-toggler"
@@ -24,8 +32,51 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item"> Bicicletas</li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="/category/Bicicletas"
+              >
+                {" "}
+                Bicicletas
+              </NavLink>
+            </li>
           </ul>
+
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="/category/Últimos modelos"
+              >
+                Últimos Modelos
+              </NavLink>
+            </li>
+          </ul>
+
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="/category/Las mas vendidas"
+              >
+                Las más vendidas
+              </NavLink>
+            </li>
+          </ul>
+
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="/category/Contacto"
+              >
+                Contacto
+              </NavLink>
+            </li>
+          </ul>
+
+          <Link to="/cart">Carrito</Link>
 
           <CartWidgets />
         </div>

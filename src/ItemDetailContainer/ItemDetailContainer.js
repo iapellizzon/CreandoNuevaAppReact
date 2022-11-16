@@ -1,23 +1,25 @@
 import { useEffect, useState } from "react";
 import { data } from "../data/data";
+import ItemsListContainer from "../componentes/ItemsListContainer/ItemsListContainer";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState();
+  const [productSelected, setProductSelected] = useState();
+  const { id } = useParams();
 
-  const getData = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 2000);
-  });
-  useEffect(() => {
-    getData.then((response) => {
-      setProduct(response[0]);
+  const getProduct = () => {
+    const productFiltered = data.filter((producto) => {
+      return producto.id == id;
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    setProductSelected(productFiltered);
+  };
+
+  useEffect(() => {
+    getProduct();
+  }, [id]);
   return (
     <div>
-      <h1>{product?.name}</h1>
+      {productSelected && <ItemDetail productSelected={productSelected} />}
     </div>
   );
 };

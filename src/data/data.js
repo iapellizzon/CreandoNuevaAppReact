@@ -4,27 +4,27 @@ import { BsArrowUpLeft, BsSlack } from "react-icons/bs";
 export const data = [
   {
     id: 1,
-    name: "BiciOne",
-    color: "blue",
+    title: "Bici nueva",
+    category: "bici nueva",
   },
   {
     id: 2,
-    name: "BiciTwo",
-    color: "green",
+    title: "Bici mas vendida",
+    category: "bici mas vendida",
   },
   {
     id: 3,
-    name: "BiciThree",
-    color: "red",
+    title: "Bici nueva dos",
+    category: "bici nueva",
   },
   {
     id: 4,
-    name: "BiciFour",
-    color: "black",
+    title: "B nueva tres",
+    category: "black",
   },
   {
     id: 5,
-    name: "BiciFive",
-    color: "yellow",
+    title: "Bici mas vendida dos",
+    category: "bici mas vendida",
   },
 ];
