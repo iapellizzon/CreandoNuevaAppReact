@@ -8,15 +8,14 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <li>
-          <a className="navbar-brand" href="#">
-            {" "}
-            <NavLink
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to="/"
-            >
-              Bicicletas Devenir
-            </NavLink>
-          </a>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active navbar-brand" : "inactive navbar-brand"
+            }
+            to="/"
+          >
+            Bicicletas Devenir
+          </NavLink>
         </li>
 
         <button

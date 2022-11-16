@@ -15,7 +15,7 @@ function App() {
           element={<ItemsListContainer />}
         />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="cart" element={<itemListContainer />} />
+        <Route path="cart" element={<ItemsListContainer />} />
       </Routes>
     </BrowserRouter>
     /*     <>

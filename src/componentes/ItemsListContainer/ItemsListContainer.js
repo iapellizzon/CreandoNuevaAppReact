@@ -2,6 +2,7 @@ import { data } from "../../data/data";
 import { useState, useEffect } from "react";
 import "./ItemsListContainer.css";
 import { useParams } from "react-router-dom";
+import ItemList from "../ItemList/ItemList";
 
 const ItemsListContainer = () => {
   const [items, setItems] = useState([]);
@@ -25,16 +26,11 @@ const ItemsListContainer = () => {
       .then((res) => setItems(res))
       .catch((error) => console.log(error));
   }, [categoryName]);
-  return <div>{<Itemlist products={items} />}</div>;
-};
-
-/* const ItemsListContainer = (props) => {
-  console.log(props);
   return (
-    <div className="message-greeting-container">
-      <h2 className="message">{props.name}</h2>
+    <div>
+      <ItemList products={items} />
     </div>
   );
-}; */
+};
 
 export default ItemsListContainer;

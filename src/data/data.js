@@ -5,26 +5,26 @@ export const data = [
   {
     id: 1,
     title: "Bici nueva",
-    category: "bici nueva",
+    category: "Últimos modelos",
   },
   {
     id: 2,
     title: "Bici mas vendida",
-    category: "bici mas vendida",
+    category: "Las mas vendidas",
   },
   {
     id: 3,
     title: "Bici nueva dos",
-    category: "bici nueva",
+    category: "Últimos modelos",
   },
   {
     id: 4,
     title: "B nueva tres",
-    category: "black",
+    category: "Bicicletas",
   },
   {
     id: 5,
     title: "Bici mas vendida dos",
-    category: "bici mas vendida",
+    category: "Las mas vendidas",
   },
 ];
