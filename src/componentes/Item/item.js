@@ -7,7 +7,7 @@ const Item = ({ product }) => {
         <img
           width={"300px"}
           alt={product.title}
-          src={`images/${product.imageId}`}
+          src={`/images/${product.imageId}`}
         />
         <h2>{product.title}</h2>
         <h2>{product.description}</h2>
