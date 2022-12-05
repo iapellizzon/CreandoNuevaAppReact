@@ -8,10 +8,8 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const getProduct = () => {
-    const productFiltered = data.find((producto) => {
-      return producto.id == id;
-    });
-    setProductSelected(productFiltered);
+    const prod = data.find((p) => (p.id = id));
+    setProductSelected(prod);
   };
 
   useEffect(() => {
