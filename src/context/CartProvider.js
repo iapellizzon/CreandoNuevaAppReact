@@ -1,13 +1,12 @@
-import { cartContext, useState } from "react";
+import { useState, createContext } from "react";
 
+const cartContext = createContext();
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product, quantity) => {
     setCart([...cart, { ...product, quantity }]);
   };
-
-  const { cartContext } = cartContext();
 
   const clear = () => {
     setCart([]);
