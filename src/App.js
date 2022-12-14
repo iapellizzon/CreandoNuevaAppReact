@@ -20,15 +20,6 @@ function App() {
           <Route path="cart" element={<ItemsListContainer />} />
         </Routes>
       </BrowserRouter>
-      <>
-        <NavBar />;
-        <ItemsListContainer name="Bienvenidos a mi tienda online" />
-        <div className="App">
-          <header className="App-header">
-            <ItemDetailContainer />
-          </header>
-        </div>
-      </>
     </CartProvider>
   );
 }

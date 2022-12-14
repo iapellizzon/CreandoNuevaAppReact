@@ -34,7 +34,7 @@ const NavBar = () => {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
-                to="/category/Bicicletas"
+                to="/"
               >
                 {" "}
                 Bicicletas
@@ -46,7 +46,7 @@ const NavBar = () => {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
-                to="/category/Últimos modelos"
+                to="/category/Últimos Modelos"
               >
                 Últimos Modelos
               </NavLink>
@@ -57,7 +57,7 @@ const NavBar = () => {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
-                to="/category/Las mas vendidas"
+                to="/category/Las más vendidas"
               >
                 Las más vendidas
               </NavLink>
