@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { cartContext } from "../../context/CartProvider";
+import { cartContext } from "../../contextt/CartProvider";
 import ItemCount from "../ItemCount/ItemCount";
 const ItemDetail = ({ productSelected }) => {
   const [count, setCount] = useState(0);
