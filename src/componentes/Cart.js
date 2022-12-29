@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 
-const CartContainer = () => {
+const Cart = () => {
   const { cartArray, deleteItem } = useContext(CartContext);
 
   if (cartArray.lenght === 0) {

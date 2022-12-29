@@ -12,7 +12,7 @@ const CartItem = ({ product, deleteItem }) => {
           <Col>
             <Button
               variant="danger"
-              onClick={() => handleDelete(product.item.id)}
+              onClick={() => deleteItem(product.item.id)}
             >
               Delete
             </Button>

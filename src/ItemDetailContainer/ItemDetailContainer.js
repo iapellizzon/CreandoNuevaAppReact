@@ -9,8 +9,6 @@ const ItemDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
   const { id } = useParams();
 
-  const { addToCart } = useContext(CartContext);
-
   useEffect(() => {
     const db = getFirestore();
     const coleccionProd = collection(db, "items");
@@ -24,11 +22,6 @@ const ItemDetailContainer = () => {
       })
       .catch((error) => console.log(error));
   }, [id]);
-
-  const onAdd = (count) => {
-    addToCart(products, count);
-    setAdded(true);
-  };
 
   return (
     <div>
