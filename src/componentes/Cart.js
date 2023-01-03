@@ -5,7 +5,8 @@ import { CartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 
 const Cart = () => {
-  const { cartArray, deleteItem } = useContext(CartContext);
+  const { cartArray, deleteItem, clearCart, cartTotal } =
+    useContext(CartContext);
 
   if (cartArray.lenght === 0) {
     return (
@@ -21,6 +22,9 @@ const Cart = () => {
       {cartArray.map((prod) => (
         <CartItem key={prod.item.id} product={prod} deleteItem={deleteItem} />
       ))}
+      <p>Total a pagar: {totalCart()}</p>
+      <button onClick={clearCart}>Vaciar Carrito</button>{" "}
+      <button>Finalizar Compra </button>
     </div>
   );
 };

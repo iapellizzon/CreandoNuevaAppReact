@@ -45,11 +45,19 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  const cartTotal = () => {
+    return cartArray.reduce(
+      (acc, prod) => (acc += prod.item.price * prod.count),
+      0
+    );
+  };
+
   const value = {
     cartArray,
     addToCart,
     deleteItem,
     clearCart,
+    cartTotal,
   };
 
   return (
